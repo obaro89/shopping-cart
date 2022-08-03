@@ -6,9 +6,9 @@ import { CartContext } from "../../contexts/cart.context";
 
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 import CartIcon from "../../components/cartIcon/CartIcon";
-import "./navigation.style.scss";
 import CartDropdown from "../../components/cartDropdown/CartDropdown";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
+import "./navigation.style.scss";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);

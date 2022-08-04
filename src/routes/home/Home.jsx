@@ -1,6 +1,8 @@
+import { Outlet } from "react-router-dom";
 import Categories from "../../components/categories/Categories";
 
 const Home = () => {
+  console.log("mounted");
   const categories = [
     {
       id: 1,
@@ -28,7 +30,13 @@ const Home = () => {
       imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
     },
   ];
-  return <Categories categories={categories} />;
+
+  return (
+    <div>
+      <Categories categories={categories} />
+      <Outlet />
+    </div>
+  );
 };
 
 export default Home;
